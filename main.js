@@ -43,4 +43,4 @@ benjamin["gender"] = "Female";
 delete benjamin.age;
 delete benjamin["age"];
 
-console.log(benjamin);
+//console.log(benjamin);
