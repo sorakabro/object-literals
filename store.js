@@ -19,6 +19,10 @@ let ica = {
         //Är villkoret sant, så behålls elementet. Är villkoret falskt så sorteras det bort.
         this.staff = this.staff.filter(p => p !== person);
         return this;
+    },
+    addProduct: function (product) {
+        this.products.push(product);
+        return this;
     }
 }
 
@@ -65,13 +69,29 @@ let sofia = {
         store.staff.push(this);
         return this;
     }
-}
+};
 
-// insert the person into the staff array in ica
-//ica.staff.push(benjamin, sofia);
+// add product object
 
-// Add the worksat array to ica. 
-benjamin.worksAt = ica;
+let milk = {
+    name: "Mellan Mjölk",
+    price: 20
+};
+
+let cheese = {
+    name: "Ost",
+    price: 11
+};
+
+let chips = {
+    name: "Chips",
+    price: 23
+};
+
+let beef = {
+    name: "Biff",
+    price: 59
+};
 
 
 
