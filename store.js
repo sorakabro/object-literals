@@ -6,7 +6,20 @@ let ica = {
     zipcode: "123321",
     city: "Lund",
     staff: [],
-    products: []
+    products: [],
+    hireStaff: function(person){
+        // Vi använder oss av "this" här, för att "this" hänvisar till det egna objektet.
+        // Så "this" = ica
+        this.staff.push(person);
+        person.worksAt = this;
+        return this;
+    },
+    fireStaff: function (person) {
+        // Vi använder här en arraymetod som heter filter(), den filtrerar bort element utifrån ett villkor.
+        //Är villkoret sant, så behålls elementet. Är villkoret falskt så sorteras det bort.
+        this.staff = this.staff.filter(p => p !== person);
+        return this;
+    }
 }
 
 
@@ -40,9 +53,10 @@ let sofia = {
 }
 
 // insert the person into the staff array in ica
-ica.staff.push(benjamin, sofia);
+//ica.staff.push(benjamin, sofia);
 
 // Add the worksat array to ica. 
 benjamin.worksAt = ica;
 
-console.log(ica);
+
+
