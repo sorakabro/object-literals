@@ -31,7 +31,12 @@ let benjamin = {
     age: 30,
     salary: 45000,
     gender: "Male",
-    worksAt: {}
+    worksAt: {},
+    startWorkAt: function(store) {
+        this.worksAt = store;
+        store.staff.push(this);
+        return this;
+    }
 }
 
 let erik = {
@@ -40,7 +45,12 @@ let erik = {
     age: 45,
     salary: 23000,
     gender: "Male",
-    worksAt: {}
+    worksAt: {},
+    startWorkAt: function(store) {
+        this.worksAt = store;
+        store.staff.push(this);
+        return this;
+    }
 }
 
 let sofia = {
@@ -49,7 +59,12 @@ let sofia = {
     age: 22,
     salary: 48000,
     gender: "Male",
-    worksAt: {}
+    worksAt: {},
+    startWorkAt: function(store) {
+        this.worksAt = store;
+        store.staff.push(this);
+        return this;
+    }
 }
 
 // insert the person into the staff array in ica
